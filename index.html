@@ -89,7 +89,7 @@
                 <canvas height=0 class="videoMerge" id="teaserMerge"></canvas>
 			</div>
             <div class="col-md-8 col-md-offset-2">
-                <p class="text-center">
+                <p class="text-center" style="font-family: 'Times New Roman', Times, serif;">
                     Dragging results of DYG: The left video shows the original 3D scene and user input,
                     <br />while the right video shows the result after dragging edit.
                     <br /> 
@@ -99,11 +99,11 @@
 
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                <h3>
+                <h3 style="font-family: 'Times New Roman', Times, serif;">
                     TL;DR
                 </h3>
                 
-                <div class="banner">
+                <div class="banner" style="font-family: 'Times New Roman', Times, serif;">
                     DYG allows users to drag 3D Gaussian scene, achieving flexible and precise editing results.
                 </div>
 
@@ -113,31 +113,14 @@
 
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    Abstract
-                </h3>
-                <p class="text-justify">
-                    Recent advancements in 3D scene editing have been propelled by the rapid development of generative models.
-                    Existing methods typically utilize generative models to perform text-guided editing of 3D representations, such as 3D Gaussian Splatting (3DGS). However, these methods are often limited to texture modifications and fail when addressing large-scale geometric changes, such as editing a character's head to turn around. Moreover, such methods lack accurate control over the position of editing results, as language struggles to precisely describe the extent of edits. To this end, we introduce DYG, an effective 3D drag-based editing method for 3D Gaussian Splatting. It enables users to conveniently specify the target dragging region and the desired dragging direction through the input of 3D masks and pairs of control points, thereby achieving flexible and precise editing results.
-                    Specifically, given the discrete and non-structural nature of 3DGS, 
-                    which poses challenges for edits In unevenly distributed 3DGS fields,
-                    DYG introduces Triplane to predict the position shifts of 3DGS, thereby establishing the scaffold of the editing results.
-                    The Region-Specific Positional Decoder and Smooth Local Edition modules are proposed to focus the editing on the target region while ensuring other areas of the scene remain unchanged. Additionally, our proposed score distillation loss function, Drag-SDS, enables multi-view consistent editing results.
-                    Extensive experiments demonstrate that DYG conducts effective drag-based editing following the control points prompts, surpassing other baselines in terms of editing effect and quality, both qualitatively and quantitatively.
-                </p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
+                <h3 style="font-family: 'Times New Roman', Times, serif;">
                     Pipeline
                 </h3>
                 <div class="text-center">
                     <img src="image/pipeline.png" width="100%">
                 </div>
                 <div class="text-justify">
-                    <p>
+                    <p style="font-family: 'Times New Roman', Times, serif;">
                         The overall framework of DYG. Given a 3D Gaussian scene, the user inputs 3D Masks and several pairs of 3D control points.
                         <b>Top:</b> the 3D Gaussian scene is encoded using a Multi-scale Triplane Positional Encoder to capture the position of the 3D Gaussians
                         We apply a Region-Specific Positional Encoder to differentiate the decoding of Gaussians inside the 3D Mask from those outside, obtaining positional offsets.
@@ -153,10 +136,10 @@
 
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                <h3>
+                <h3 style="font-family: 'Times New Roman', Times, serif;">
                     Video Comparison
                 </h3>
-                <p>Below shows the comparison of our results with other 3D Gaussian scene editing methods.</p>
+                <p style="font-family: 'Times New Roman', Times, serif;">Below shows the comparison of our results with other 3D Gaussian scene editing methods.</p>
             </div>
             <div class="col-md-8 col-md-offset-2">
                 <div class="div-comp-video-1">
@@ -199,7 +182,7 @@
 
 
             <div class="col-md-8 col-md-offset-2">
-                <h3>
+                <h3 style="font-family: 'Times New Roman', Times, serif;">
                     More Results
                 </h3>
             </div>
@@ -224,10 +207,10 @@
             </div>
 
             <div class="col-md-8 col-md-offset-2">
-                <h3>
+                <h3 style="font-family: 'Times New Roman', Times, serif;">
                     Multi-Round Edit
                 </h3>
-                <p>
+                <p style="font-family: 'Times New Roman', Times, serif;">
                     Our method supports multi-round dragging on different objects and the same objects. 
                 </p>
             </div>
@@ -239,7 +222,7 @@
                                 <source src="video/multi-round_edit1.mp4" type="video/mp4" />
                             </video>
                             <div class="text-center" style="font-size: 18px;">
-                                <p><b>Multi-round Dragging on Different Objects</b></p>
+                                <p style="font-family: 'Times New Roman', Times, serif;"><b>Multi-round Dragging on Different Objects</b></p>
                             </div>
                         </td>
                     </tr>
@@ -251,7 +234,7 @@
                                 <source src="video/multi-round_edit2.mp4" type="video/mp4" />
                             </video>
                             <div class="text-center" style="font-size: 18px;">
-                                <p><b>Multi-round Dragging on Same Objects</b></p>
+                                <p style="font-family: 'Times New Roman', Times, serif;"><b>Multi-round Dragging on Same Objects</b></p>
                             </div>
                         </td>
                     </tr>
@@ -262,10 +245,10 @@
 
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                <h3>
+                <h3 style="font-family: 'Times New Roman', Times, serif;">
                     Generalizability
                 </h3>
-                <p>
+                <p style="font-family: 'Times New Roman', Times, serif;">
                     Besides editing real scenes, our method can also edit recent text-to-3D generation results.
                 </p>
                 <table width="100%">
