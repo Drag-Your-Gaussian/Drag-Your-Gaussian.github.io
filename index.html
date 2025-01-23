@@ -124,7 +124,7 @@
                         The overall framework of DYG. 
                         <b>Left:</b> Given a 3D Gaussian scene, users provide 3D masks and several pairs of control points as input. 
                         <b>Top-right:</b> The Smooth Geometric Editing module predicts positional offsets for 3D Gaussians, resolving the issue of sparse distributions within the target region while ensuring seamless local editing. We adopt a two-stage training strategy: the first stage constructs the geometric scaffold of the edited Gaussians, and the second stage refines the texture details.
-                        <b>Bottom-right:</b>In the Score Distillation Guidance Module, to ensure stable optimization, 3D control points are projected onto 2D control points for a specified viewpoint. The RGB image and 2D mask, rendered from the mirrored initial 3D Gaussians, are encoded into point embeddings (P-Emb) and appearance embeddings (A-Emb), which act as conditions for the drag-based LDM. This process leverages our proposed Drag-SDS loss function to enable flexible and view-consistent 3D drag-based editing.
+                        <b>Bottom-right:</b> In the Score Distillation Guidance Module, to ensure stable optimization, 3D control points are projected onto 2D control points for a specified viewpoint. The RGB image and 2D mask, rendered from the mirrored initial 3D Gaussians, are encoded into point embeddings (P-Emb) and appearance embeddings (A-Emb), which act as conditions for the drag-based LDM. This process leverages our proposed Drag-SDS loss function to enable flexible and view-consistent 3D drag-based editing.
                     </p>
             </div>
         </div>
