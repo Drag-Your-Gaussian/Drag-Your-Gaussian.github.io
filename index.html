@@ -121,12 +121,10 @@
                 </div>
                 <div class="text-justify">
                     <p style="font-family: 'Times New Roman', Times, serif;">
-                        The overall framework of DYG. Given a 3D Gaussian scene, the user inputs 3D Masks and several pairs of 3D control points.
-                        <b>Top:</b> the 3D Gaussian scene is encoded using a Multi-scale Triplane Positional Encoder to capture the position of the 3D Gaussians
-                        We apply a Region-Specific Positional Encoder to differentiate the decoding of Gaussians inside the 3D Mask from those outside, obtaining positional offsets.
-                        In this process, we apply Smooth Local Edition to smooth the deformation inside and outside the Mask to prevent boundary geometric tearing, while applying regularization loss on the Gaussians outside the Mask to encourage them to remain unchanged. 
-                        <b>Bottom:</b> For the initial scene, user-input 3D Mask, and 3D drag points, we perform rendering and projection to obtain 2D initial images, 2D Masks, and 2D control points. These are then passed through an encoder to obtain conditional embeddings.
-                        The conditional embedding and noise-added Gaussian forward-rendered images are input into a 2D Drag-Based Latent Diffusion Model (LDM). We optimize the 3D Gaussian properties and Triplane using our proposed Score Distillation loss function, Drag-SDS, to generate multi-view consistent editing results.
+                        The overall framework of DYG. 
+                        <b>Left:</b> Given a 3D Gaussian scene, users provide 3D masks and several pairs of control points as input. 
+                        <b>Top-right:</b> The Smooth Geometric Editing module predicts positional offsets for 3D Gaussians, resolving the issue of sparse distributions within the target region while ensuring seamless local editing. We adopt a two-stage training strategy: the first stage constructs the geometric scaffold of the edited Gaussians, and the second stage refines the texture details.
+                        <b>Bottom-right:</b>In the Score Distillation Guidance Module, to ensure stable optimization, 3D control points are projected onto 2D control points for a specified viewpoint. The RGB image and 2D mask, rendered from the mirrored initial 3D Gaussians, are encoded into point embeddings (P-Emb) and appearance embeddings (A-Emb), which act as conditions for the drag-based LDM. This process leverages our proposed Drag-SDS loss function to enable flexible and view-consistent 3D drag-based editing.
                     </p>
             </div>
         </div>
